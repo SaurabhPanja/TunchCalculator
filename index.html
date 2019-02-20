@@ -30,8 +30,25 @@
         <label for="tunch">Enter <strong>Tunch</strong> in percentage %</label>
         <input class="form-control" type="number" name="tunch" min="50" max="100" required>
       </div>
-      <button class="btn btn-primary btn-lg d-block w-100" onclick="Calculate()">Calculate</button>
-      <h3 class="mt-3">Alloy to be mixed</h3>
+      <button class="btn btn-primary btn-lg d-block w-100" onclick="CalculateFromFine()">Calculate</button>
+      <h3 class="mt-3" id="fine">Alloy to be mixed</h3>
+
+      <hr class="bg-warning" style="height:20px">
+
+      <div class="form-group">
+        <label for="impureGoldInGm">Enter amount of <strong>impure gold</strong> in grams</label>
+        <input class="form-control" type="number" name="impureGoldInGm" required>
+      </div>
+      <div class="form-group">
+        <label for="impureTunch">Enter <strong>impure Tunch</strong> in percentage %</label>
+        <input class="form-control" type="number" name="impureTunch" min="50" max="100" required>
+      </div>
+      <div class="form-group">
+        <label for="newTunch">Enter <strong>new Tunch</strong> in percentage %</label>
+        <input class="form-control" type="number" name="newTunch" min="50" max="100" required>
+      </div>
+      <button class="btn btn-primary btn-lg d-block w-100" onclick="CalculateFromImpure()">Calculate</button>
+      <h3 id="#impure" class="mt-3">Fine Gold to be added</h3>
     </div>
     <!-- Optional JavaScript -->
     <script src="main.js" charset="utf-8"></script>
