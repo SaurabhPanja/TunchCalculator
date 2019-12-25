@@ -1,61 +1,76 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="author" content="Saurabh Panja">
-    <meta name="description" content="Tunch Calculator, to Calculate the amount
-    of alloy that needs to be added in pure gold to get the desired tunch">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Tunch Calculator</title>
-    <style media="screen">
-      body{
-        font-size : 1.5em;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="bg-info">
-      <h1> &nbsp;Tunch Calculator</h1>
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Saurabh Panja">
+  <meta name="description" content="Tunch Calculator, to Calculate the amount
+    of alloy that needs to be added in pure gold to get the desired tunch">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <title>Tunch Calculator</title>
+  <link rel="stylesheet" href="./lib/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="row bg-info h3">
+      <div class="col-md-12 text-center">Tunch Calculator</div>
     </div>
-    <div class="container">
-      <div class="form-group">
+
+    <div class="row">
+      <div class="form-group col-md-12">
         <label for="goldInGm">Enter amount of <strong>gold</strong> in grams</label>
         <input class="form-control" type="number" name="goldInGm" required>
       </div>
-      <div class="form-group">
+      <div class="form-group col-md-12">
         <label for="tunch">Enter <strong>Tunch</strong> in percentage %</label>
         <input class="form-control" type="number" name="tunch" min="50" max="100" required>
       </div>
-      <button class="btn btn-primary btn-lg d-block w-100" onclick="CalculateFromFine()">Calculate</button>
-      <h3 class="mt-3" id="fine">Alloy to be mixed</h3>
+      <button class="btn btn-success btn-lg mx-auto" onclick="CalculateFromFine()">Calculate</button>
+    </div>
 
-      <hr class="bg-warning" style="height:20px">
+    <h3 class="mt-3" id="fine">Alloy to be mixed</h3>
 
-      <div class="form-group">
+    <hr>
+
+    <div class="row">
+      <div class="form-group col-md-12">
         <label for="impureGoldInGm">Enter amount of <strong>impure gold</strong> in grams</label>
         <input class="form-control" type="number" name="impureGoldInGm" required>
       </div>
-      <div class="form-group">
+      <div class="form-group col-md-12">
         <label for="impureTunch">Enter <strong>impure Tunch</strong> in percentage %</label>
         <input class="form-control" type="number" name="impureTunch" min="50" max="100" required>
       </div>
-      <div class="form-group">
+      <div class="form-group col-md-12">
         <label for="newTunch">Enter <strong>new Tunch</strong> in percentage %</label>
         <input class="form-control" type="number" name="newTunch" min="50" max="100" required>
       </div>
-      <button class="btn btn-primary btn-lg d-block w-100" onclick="CalculateFromImpure()">Calculate</button>
-      <h3 id="#impure" class="mt-3">Fine Gold to be added</h3>
+      <button class="btn btn-success btn-lg mx-auto" onclick="CalculateFromImpure()">Calculate</button>
     </div>
-    <!-- Optional JavaScript -->
-    <script src="main.js" charset="utf-8"></script>
 
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  </body>
+    <h3 id="#impure" class="mt-3">Fine Gold to be added</h3>
+  </div>
+
+
+  <!-- Optional JavaScript -->
+  <script src="./lib/main.js" charset="utf-8"></script>
+
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>
